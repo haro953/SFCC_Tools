@@ -75,6 +75,20 @@ $('.clearAllMerge').on('click', function(){
   $('.mergedTextForDownload').val('');
 });
 
+$('#downloadMergedButton').on('click', function(){
+  var content = $('.mergedTextForDownload').val();
+  var blob = new Blob([content], { type: "application/xml;charset=utf-8" });
+  var url = window.URL.createObjectURL(blob);
+  var link = document.createElement("a");
+  link.href = url;
+  var now = new Date();
+  var timestamp = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0') + '_' + String(now.getHours()).padStart(2, '0') + String(now.getMinutes()).padStart(2, '0') + String(now.getSeconds()).padStart(2, '0');
+  link.download = "merged_" + timestamp + ".xml";
+  document.body.appendChild(link);
+  link.click();
+  window.URL.revokeObjectURL(url);
+});
+
 // Helper: extract root name
 function getRootName(xml) {
   var m = xml.match(/<\s*([\w:-]+)/);
