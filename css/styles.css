@@ -40,6 +40,9 @@ body {
   font-weight: 700;
   color: var(--accent);
   text-decoration: none;
+  img {
+    height: 90px;
+  }
 }
 
 nav a {
@@ -73,8 +76,8 @@ nav a {
 }
 
 .site-footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.03);
-  padding: 1rem 0;
+  border-top: 2px solid rgba(255, 255, 255, 0.03);
+  padding: 1rem 60px;
   margin-top: 3rem;
   color: var(--muted);
 }
