@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>File Import</title>
+  <link rel="stylesheet" href="/css/fileImport.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/js/fileImport.js"></script>
+</head>
+
+    <body>
+        <header class="site-header">
+            <div class="container">
+            <a href="/" class="logo">My Name</a>
+            <nav>
+                <a href="/about.html">About</a>
+                <a href="/projects.html">Projects</a>
+                <a href="/contact.html">Contact</a>
+                <a href="/fileImport.html">File Import</a>
+            </nav>
+            </div>
+        </header>
+        <main>
+            <div class="pageContainer">
+                <div class="textContainer leftAlign">
+
+                    <div class="wordCountContainer">
+                        <div class="wordAppears"> Select Two XML Files To Merge</div>
+                    </div>
+
+                    <div class="functionalityContainer">
+                        <input class="fileSearch" type="file" accept=".xml" id="fileimport"></input>
+                        <button class="clearAllTop">Clear All</button>
+                    </div>
+
+                    <div class="textareaContainer">
+                        <textarea class="textdump fileToMerge" placeholder="Your File That Will Get Merged In" readonly></textarea>
+                    </div>
+
+                    <div class="functionalityContainer">
+                        <input class="fileSearch" type="file" accept=".xml" id="fileimportMainFile"></input>
+                        <button class="clearAllBottom">Clear All</button>
+                    </div>
+
+                    <div class="textareaContainer">
+                        <textarea class="textdump fileRecieveingMerge" placeholder="The File That Will Receive The Merge" readonly></textarea>
+                    </div>
+
+                </div>
+
+                <div class="textContainer rightAlign">
+                    <div class="wordCountContainer">
+                        <div class="wordAppears"> Merged XML File</div>
+                    </div>
+
+                    <div class="functionalityContainer">
+                        <button class="mergeAll" type="button" id="mergeAllButton">Merge XML Files</button>
+                        <button class="clearAllMerge">Clear All</button>
+                    </div>
+
+                    <div class="textareaContainer">
+                        <textarea class="mergedTextForDownload" placeholder="Your Merged XML File" readonly></textarea>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="site-footer">
+            <div class="footerContainer">
+                <small>&copy; 2025 My Name</small>
+            </div>
+        </footer>
+    </body>
+</html>
