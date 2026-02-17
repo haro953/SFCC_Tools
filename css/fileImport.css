@@ -1,6 +1,7 @@
 .pageContainer {
   margin-left: 60px;
   margin-right: 60px;
+  overflow: hidden;
 }
 
 .functionalityContainer {
@@ -128,7 +129,8 @@ input.placeholder {
 .rightAlign {
   width: 50%;
   float: right;
-  .textareaContainer {
-    padding-right: 0;
-  }
+}
+
+.rightAlign .textareaContainer {
+  padding-right: 0;
 }
