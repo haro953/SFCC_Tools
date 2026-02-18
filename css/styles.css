@@ -19,8 +19,8 @@ body {
 }
 
 .container {
-  margin: 60px;
-  padding: 2rem;
+  margin-left: 60px;
+  margin-right: 60px;
   padding-left: 0;
   padding-right: 0;
 }
@@ -41,7 +41,21 @@ body {
   color: var(--accent);
   text-decoration: none;
   img {
-    height: 90px;
+    height: 100px;
+  }
+}
+
+button {
+  background: transparent;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  &:hover {
+    background: var(--accent);
+    color: #fff;
   }
 }
 
@@ -49,6 +63,16 @@ nav a {
   color: var(--muted);
   margin-left: 1rem;
   text-decoration: none;
+  padding-right: 1.5rem;
+  border-right: 1px solid var(--muted);
+  &:last-child {
+    border-right: none;
+    padding-right: 0rem;
+  }
+  &:hover {
+    color: white;
+    text-decoration: underline;
+  }
 }
 
 .hero {

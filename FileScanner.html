@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>File Scanner Tool</title>
+  <link rel="stylesheet" href="/css/fileScanner.css">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div id="nav-container"></div>
+
+  <main class="container">
+    <div class="innercontainer">
+
+      <div class="functionalityContainer">
+        <label for="fileimport" class="custom-file-upload">
+          Select A File
+        </label>
+        <input class="fileSearch" type="file" accept=".txt, .xml, .json, .js" id="fileimport"></input>
+        <div class="fileName">No File Currently Selected</div>
+        <button class="clearAll">Clear All</button>
+      </div>
+
+      <div class="functionalityContainer">
+        <input type="search" class="searchbox" placeholder="Begin Typing To Search For A Word Or Phrase"></input>
+      </div>
+
+      <div class="wordCountContainer">
+      <div class="wordAppears"> The Word Or Phrase You Are Looking For Appears <span class="numberTimes"># Of</span> Times</div>
+      </div>
+
+      <div class="textdump" data-placeholder="Your Files Content Will Appear Here Once Loaded"></div>
+
+    </div>
+  </main>
+
+  <div id="nav-container-footer"></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/fileScanner.js"></script>
+</body>
+</html>

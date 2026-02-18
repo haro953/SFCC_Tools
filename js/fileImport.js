@@ -32,6 +32,7 @@ $("#fileimport").on('change', function(event) {
     var fileContent = reader.result;
     var fileLength = fileContent.length;
     var formattedContent = isXml(input.files[0].name) ? formatXml(fileContent) : fileContent;
+    fileimport.files[0].name ? $('.fileNameToMerge').text(fileimport.files[0].name) : $('.fileNameToMerge').text('No File Currently Selected');
     $('.fileToMerge').text(formattedContent);
   }
   reader.readAsText(input.files[0]);
@@ -45,6 +46,7 @@ $("#fileimportMainFile").on('change', function(event) {
     var fileContent = reader.result;
     var fileLength = fileContent.length;
     var formattedContent = isXml(input.files[0].name) ? formatXml(fileContent) : fileContent;
+    fileimportMainFile.files[0].name ? $('.fileNameToMergeMain').text(fileimportMainFile.files[0].name) : $('.fileNameToMergeMain').text('No File Currently Selected');
     $('.fileRecieveingMerge').text(formattedContent);
   }
   reader.readAsText(input.files[0]);
@@ -64,11 +66,13 @@ $('.searchbox').on('keyup', function(){
 $('.clearAllTop').on('click', function(){
   $('.fileToMerge').val('');
   $('.fileSearch').val('');
+  $('.fileNameToMerge').text('No File Currently Selected');
 });
 
 $('.clearAllBottom').on('click', function(){
   $('.fileRecieveingMerge').val('');
   $('.fileSearch').val('');
+  $('.fileNameToMergeMain').text('No File Currently Selected');
 });
 
 $('.clearAllMerge').on('click', function(){
@@ -91,8 +95,8 @@ $('#downloadMergedButton').on('click', function(){
 
 // Helper: extract root name
 function getRootName(xml) {
-  var m = xml.match(/<\s*([\w:-]+)/);
-  return m ? m[1] : null;
+  var tagMatch = xml.match(/<\s*([\w:-]+)/);
+  return tagMatch ? tagMatch[1] : null;
 }
 
 // Helper: get inner content of root element

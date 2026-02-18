@@ -1,0 +1,30 @@
+article {
+  margin-bottom: 4%;
+}
+
+.textBlurb {
+  margin-top: 15px;
+  line-height: 1.5;
+  max-width: 65%;
+  background-color:  var(--accent);
+  padding: 40px;
+  height:300px;
+  border-radius: 30px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+
+}
+
+.leftBuble {
+  margin-right: auto;
+}
+
+.rightBuble {
+  margin-left: auto;
+}
+
+h1.rightBuble {
+  text-align: right;
+}

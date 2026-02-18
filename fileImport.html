@@ -9,17 +9,7 @@
 </head>
 
     <body>
-        <header class="site-header">
-            <div class="container">
-            <a href="/" class="logo"><img src="/assets/logo.svg" alt="SFCC Tools" /></a>
-            <nav>
-                <a href="/about.html">About</a>
-                <a href="/projects.html">Projects</a>
-                <a href="/contact.html">Contact</a>
-                <a href="/fileImport.html">File Import</a>
-            </nav>
-            </div>
-        </header>
+        <div id="nav-container"></div>
         <main>
             <div class="pageContainer">
                 <div class="textContainer leftAlign">
@@ -29,7 +19,11 @@
                     </div>
 
                     <div class="functionalityContainer">
+                        <label for="fileimport" class="custom-file-upload">
+                            Select A File
+                        </label>
                         <input class="fileSearch" type="file" accept=".xml" id="fileimport"></input>
+                        <div class="fileName fileNameToMerge">No File Currently Selected</div>
                         <button class="clearAllTop">Clear All</button>
                     </div>
 
@@ -38,7 +32,11 @@
                     </div>
 
                     <div class="functionalityContainer">
+                        <label for="fileimportMainFile" class="custom-file-upload">
+                            Select A File
+                        </label>
                         <input class="fileSearch" type="file" accept=".xml" id="fileimportMainFile"></input>
+                        <div class="fileName fileNameToMergeMain">No File Currently Selected</div>
                         <button class="clearAllBottom">Clear All</button>
                     </div>
 
@@ -65,12 +63,9 @@
                 </div>
             </div>
         </main>
-        <footer class="site-footer">
-            <div class="footerContainer">
-                <small>&copy; 2025 My Name</small>
-            </div>
-        </footer>
+        <div id="nav-container-footer"></div>
           <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-          <script src="/js/fileImport.js"></script
+          <script src="/js/fileImport.js"></script>
+          <script src="/js/main.js"></script>
     </body>
 </html>
