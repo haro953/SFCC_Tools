@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function(){
   // Import nav.html into nav-container
   const navContainer = document.getElementById('nav-container');
   if (navContainer) {
-    fetch('/nav.html')
+    fetch('nav.html')
       .then(response => response.text())
       .then(html => {
         navContainer.innerHTML = html;
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   const navContainerFooter = document.getElementById('nav-container-footer');
   if (navContainerFooter) {
-    fetch('/footer.html')
+    fetch('footer.html')
       .then(response => response.text())
       .then(html => {
         navContainerFooter.innerHTML = html;
