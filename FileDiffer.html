@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>File Diff Checking Tool</title>
+  <link rel="stylesheet" href="css/fileDiffer.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="nav-container"></div>
+
+  <main class="container">
+    <div class="innercontainer leftAlign">
+
+      <div class="functionalityContainer">
+        <label for="fileimportLeft" class="custom-file-upload">
+          Select A File
+        </label>
+        <input class="fileSearchLeft" type="file" accept=".txt, .xml, .json, .js" id="fileimportLeft"></input>
+        <div class="fileNameLeft">No File Currently Selected</div>
+        <button class="clearAllLeft">Clear All</button>
+      </div>
+
+      <div class="textdump leftTextDump" data-placeholder="Your Files Content Will Appear Here Once Loaded"></div>
+
+    </div>
+
+    <div class="innercontainer rightAlign">
+
+      <div class="functionalityContainer">
+        <label for="fileimportRight" class="custom-file-upload">
+          Select A File
+        </label>
+        <input class="fileSearchRight" type="file" accept=".txt, .xml, .json, .js" id="fileimportRight"></input>
+        <div class="fileNameRight">No File Currently Selected</div>
+        <button class="clearAllRight">Clear All</button>
+      </div>
+
+      <div class="textdump rightTextDump" data-placeholder="Your Files Content Will Appear Here Once Loaded"></div>
+
+    </div>
+
+    <div class="innercontainer centerAlign">
+
+      <div class="functionalityContainer">
+        <button class="compare">Compare Files For General Differences</button>
+        <button class="compareDeepSearch">Compare Files For Missing Lines</button>
+      </div>
+
+    </div>
+  </main>
+
+  <div id="nav-container-footer"></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/fileDiffer.js"></script>
+</body>
+</html>

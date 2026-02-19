@@ -1,7 +1,7 @@
 function formatXml(xml) {
   var formatted = '';
   var indent = '';
-  var indentSize = 2;
+  var indentSize = 4;
   
   xml.split(/(<[^>]+>)/g).forEach(function(node) {
     if (node.match(/^<\/\w/)) {
@@ -21,7 +21,7 @@ function formatXml(xml) {
 function formatJson(json) {
   var formatted = '';
   var indent = '';
-  var indentSize = 2;
+  var indentSize = 4;
   
   for (var i = 0; i < json.length; i++) {
     var char = json[i];
@@ -48,7 +48,7 @@ function formatJson(json) {
 function formatJavaScript(js) {
   var formatted = '';
   var indent = '';
-  var indentSize = 2;
+  var indentSize = 4;
   
   for (var i = 0; i < js.length; i++) {
     var char = js[i];

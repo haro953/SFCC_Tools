@@ -2,7 +2,7 @@
 function formatXml(xml) {
   var formatted = '';
   var indent = '';
-  var indentSize = 2;
+  var indentSize = 4;
   
   xml.split(/(<[^>]+>)/g).forEach(function(node) {
     if (node.match(/^<\/\w/)) {
@@ -78,6 +78,7 @@ $('.clearAllBottom').on('click', function(){
 $('.clearAllMerge').on('click', function(){
   $('.mergedTextForDownload').val('');
 });
+
 
 $('#downloadMergedButton').on('click', function(){
   var content = $('.mergedTextForDownload').val();
