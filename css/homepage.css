@@ -28,3 +28,59 @@ article {
 h1.rightBuble {
   text-align: right;
 }
+
+
+.toolBoxSectionHeader {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 9%;
+  margin-bottom: -20px;
+  margin-left:auto;
+  margin-right:auto;
+
+  width: 650px;
+  height: 150px;
+
+  background: transparent;   /* no fill */
+  border: 10px solid aliceblue;;  /* horseshoe color */
+
+  border-radius: 150px 150px 0 0; /* rounded top */
+  border-bottom: none;       /* open bottom */
+}
+
+.toolLinkSection {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 20px;
+  border: 10px solid aliceblue;
+  border-radius: 25px;
+  .toolBoxSectionHeader {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 20px;
+  }
+  a {
+      text-decoration: none;
+      background-color: aliceblue;
+      width:30%;
+      text-align: center;
+      border-radius: 10px;
+      color: var(--bg);
+      margin-top: 40px;
+      margin-bottom:40px;
+      .toolLink {
+        text-align: left;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom:20px;
+        padding:20px;
+      }
+      &:hover {
+        background-color: var(--accent);
+        color: white;
+      }
+  }
+}
